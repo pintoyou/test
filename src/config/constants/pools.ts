@@ -18,6 +18,23 @@ const pools: PoolConfig[] = [
     isFinished: false,
     tokenDecimals: 18,
   },
+  {
+    sousId: 1,
+    tokenName: 'BNB',
+    stakingTokenName: QuoteToken.CAKE,
+    stakingTokenAddress: '0xA0CcF44bA5d67E0095247F78C697Ad7cBD6E63e9',
+    contractAddress: {
+      97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    },
+    poolCategory: PoolCategory.CORE,
+    projectLink: 'http://pancakeswap.finance/',
+    harvest: true,
+    tokenPerBlock: '1',
+    sortOrder: 1,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
 ]
 
 export default pools
