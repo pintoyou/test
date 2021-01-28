@@ -31,33 +31,33 @@ const CakeStats = () => {
   const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
 
   return (
-    <StyledCakeStats>
-      <CardBody>
-        <Heading size="xl" mb="24px">
-          {TranslateString(534, 'Bean Stats')}
+    <StyledCakeStats >
+      <CardBody color="rgba(116, 116, 116, 1)">
+        <Heading size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
+          Bean Stats
         </Heading>
         <Row>
-          <Text fontSize="14px">{TranslateString(536, 'Total Bean Supply')}</Text>
+          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">Total Bean Supply</Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(538, 'Total Bean Burned')}</Text>
+          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">Total Bean Burned</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} />
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(540, 'New Bean/block')}</Text>
+          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">New Bean/block</Text>
           <CardValue fontSize="14px" decimals={0} value={25} />
         </Row>
         
       </CardBody>
       <CardBody>
-      <Heading size="lg" mb="24px">
-          {TranslateString(999, 'Total Value Locked (TVL)')}
+      <Heading size="lg" mb="24px" color="rgba(116, 116, 116, 1)">
+          Total Value Locked (TVL)
         </Heading>
         {data ? (
           <>
-            <Heading size="xl">{`$${tvl}`}</Heading>
-            <Text color="textSubtle">{TranslateString(999, 'All Coffee LPs and Pools')}</Text>
+            <Heading color="rgba(116, 116, 116, 1)" size="xl">{`$${tvl}`}</Heading>
+            <Text color="textSubtle" >All Coffee LPs and Pools</Text>
           </>
         ) : (
           <>

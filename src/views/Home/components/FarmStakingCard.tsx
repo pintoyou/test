@@ -60,11 +60,11 @@ const FarmedStakingCard = () => {
           Farms & Staking
         </Heading>
         <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
-        <Block>
+        <Block color="rgba(116, 116, 116, 1)">
           <CakeHarvestBalance />
           <Label color="rgba(116, 116, 116, 1)">CAKE to Harvest</Label>
         </Block>
-        <Block>
+        <Block color="rgba(116, 116, 116, 1)">
           <CakeWalletBalance />
           <Label color="rgba(116, 116, 116, 1)">CAKE in Wallet</Label>
         </Block>
