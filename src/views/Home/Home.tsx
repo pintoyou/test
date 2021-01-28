@@ -67,7 +67,7 @@ const Home: React.FC = () => {
         <Cards>
           <FarmStakingCard />
           <TotalValueLockedCard />
-          <CakeStats />
+        
          
         </Cards>
       </div>
