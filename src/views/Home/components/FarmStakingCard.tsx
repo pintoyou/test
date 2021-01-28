@@ -55,7 +55,7 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledFarmStakingCard>
-      <CardBody>
+      <CardBody color="rgba(116, 116, 116, 1)">
         <Heading size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
           Farms & Staking
         </Heading>

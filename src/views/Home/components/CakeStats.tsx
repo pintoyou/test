@@ -36,15 +36,15 @@ const CakeStats = () => {
         <Heading size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
           Bean Stats
         </Heading>
-        <Row>
+        <Row color="rgba(116, 116, 116, 1)">
           <Text fontSize="14px" color="rgba(116, 116, 116, 1)">Total Bean Supply</Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} />}
         </Row>
-        <Row>
+        <Row color="rgba(116, 116, 116, 1)">
           <Text fontSize="14px" color="rgba(116, 116, 116, 1)">Total Bean Burned</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} />
         </Row>
-        <Row>
+        <Row color="rgba(116, 116, 116, 1)">
           <Text fontSize="14px" color="rgba(116, 116, 116, 1)">New Bean/block</Text>
           <CardValue fontSize="14px" decimals={0} value={25} />
         </Row>
@@ -57,7 +57,7 @@ const CakeStats = () => {
         {data ? (
           <>
             <Heading color="rgba(116, 116, 116, 1)" size="xl">{`$${tvl}`}</Heading>
-            <Text color="textSubtle" >All Coffee LPs and Pools</Text>
+            <Text color="rgba(116, 116, 116, 1)" >All Coffee LPs and Pools</Text>
           </>
         ) : (
           <>
