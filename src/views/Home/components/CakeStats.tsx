@@ -5,8 +5,9 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
-import CardValue from './CardValue'
 import { useGetStats } from 'hooks/api'
+import CardValue from './CardValue'
+
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
