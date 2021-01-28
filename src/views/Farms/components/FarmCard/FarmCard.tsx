@@ -116,15 +116,15 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : 'CAKE'
+  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('BEAN', '')
+  const earnLabel = farm.dual ? farm.dual.earnLabel : 'BEAN'
   const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'CAKE' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'BEAN' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
