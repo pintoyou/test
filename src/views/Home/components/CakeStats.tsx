@@ -1,11 +1,12 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Skeleton, Heading, Text } from '@pancakeswap-libs/uikit'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
+import { useGetStats } from 'hooks/api'
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
@@ -25,6 +26,8 @@ const CakeStats = () => {
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
+  const data = useGetStats()
+  const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
 
   return (
     <StyledCakeStats>
@@ -44,9 +47,10 @@ const CakeStats = () => {
           <Text fontSize="14px">{TranslateString(540, 'New CAKE/block')}</Text>
           <CardValue fontSize="14px" decimals={0} value={25} />
         </Row>
+        
       </CardBody>
       <CardBody>
-        <Heading size="lg" mb="24px">
+      <Heading size="lg" mb="24px">
           {TranslateString(999, 'Total Value Locked (TVL)')}
         </Heading>
         {data ? (
