@@ -60,7 +60,7 @@ const Home: React.FC = () => {
         <Heading as="h1" size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
           Bean Finance
         </Heading>
-        <Text>The #1 Coffee Maker on Binance Smart Chain.</Text>
+        <Text color="rgba(116, 116, 116, 1)">The #1 Coffee Maker on Binance Smart Chain.</Text>
       </Hero>
       <div>
         <Cards>

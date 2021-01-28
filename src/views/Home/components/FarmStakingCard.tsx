@@ -56,17 +56,17 @@ const FarmedStakingCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading size="xl" mb="24px">
-          {TranslateString(542, 'Farms & Staking')}
+        <Heading size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
+          Farms & Staking
         </Heading>
         <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
         <Block>
           <CakeHarvestBalance />
-          <Label>{TranslateString(544, 'CAKE to Harvest')}</Label>
+          <Label color="rgba(116, 116, 116, 1)">CAKE to Harvest</Label>
         </Block>
         <Block>
           <CakeWalletBalance />
-          <Label>{TranslateString(546, 'CAKE in Wallet')}</Label>
+          <Label color="rgba(116, 116, 116, 1)">CAKE in Wallet</Label>
         </Block>
         <Actions>
           {account ? (
