@@ -55,7 +55,7 @@ const CakeStats = () => {
         </Heading>
         {data ? (
           <>
-            <Heading color="rgba(116, 116, 116, 1)" size="xl">Halil SBDO AL{`$${tvl}`}</Heading>
+            <Heading color="rgba(116, 116, 116, 1)" size="xl">{`$${tvl}`}</Heading>
             <Text color="rgba(116, 116, 116, 1)" >All Coffee LPs and Pools</Text>
           </>
         ) : (
