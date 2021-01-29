@@ -8,6 +8,7 @@ const StyledCardContent = styled.div`
   flex: 1;
   flex-direction: column;
   padding: 0;
+  color: rgba(116, 116, 116, 1);
 `
 
 export default CardContent

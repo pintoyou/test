@@ -5,7 +5,7 @@ interface StyledTitleProps {
 }
 
 const CardTitle = styled.div<StyledTitleProps>`
-  color: ${({ isFinished, theme }) => theme.colors[isFinished ? 'textDisabled' : 'text']};
+  color: rgba(116, 116, 116, 1);
   font-weight: 600;
   font-size: 24px;
   line-height: 1.1;

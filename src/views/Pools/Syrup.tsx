@@ -70,13 +70,13 @@ const Farm: React.FC = () => {
       <Hero>
       <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
         <div>
-          <Heading as="h1" size="xxl" mb="16px">
-            {TranslateString(282, 'Coffee Pool')}
+          <Heading as="h1" size="xxl" mb="16px" color="rgba(116, 116, 116, 1)">
+            Coffee Pool
           </Heading>
           <ul>
-            <li>{TranslateString(580, 'Stake Bean to earn Bean&Coffee.')}</li>
-            <li>{TranslateString(404, 'You can unstake at any time.')}</li>
-            <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
+            <li color="rgba(116, 116, 116, 1)">Stake Bean to earn Bean&Coffee.</li>
+            <li color="rgba(116, 116, 116, 1)">You can unstake at any time.</li>
+            <li color="rgba(116, 116, 116, 1)">Rewards are calculated per block.</li>
           </ul>
         </div>
        
