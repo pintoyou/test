@@ -8,11 +8,11 @@
 	<style>
 		tspan { white-space:pre }
 	</style>
-	<g id="Clip-Path" clip-path="url(#cp1)">
-		<g id="Layer">
-			<g id="Layer" style="opacity: 0.102">
-				<use id="Layer 1" href="#img1" x="-1" y="-1" />
+	<g id="Clip-Path" clip-path="url(#cp1)" style="display: none">
+		<g id="Layer" style="display: none">
+			<g id="Layer" style="opacity: 0.102;display: none">
 			</g>
 		</g>
 	</g>
+	<use id="Layer 1" href="#img1" x="-1" y="-1" />
 </svg>
