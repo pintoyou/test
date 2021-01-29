@@ -3,7 +3,6 @@ import { Card, CardBody, Skeleton, Heading, Text } from '@pancakeswap-libs/uikit
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
-import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { useGetStats } from 'hooks/api'
 import CardValue from './CardValue'
@@ -23,7 +22,7 @@ const Row = styled.div`
 `
 
 const CakeStats = () => {
-  const TranslateString = useI18n()
+ 
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
