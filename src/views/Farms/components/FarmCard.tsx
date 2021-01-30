@@ -142,8 +142,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
     : '-'
 
   return (
-    <FCard>
-      {farm.tokenSymbol === 'BEAN' && <StyledCardAccent />}
+    <FCard color="rgba(116, 116, 116, 1)">
+      {farm.tokenSymbol === 'CAKE' && <StyledCardAccent />}
       <CardImage>
         <Flex flexDirection="column" alignItems="flex-start">
           <Multiplier>{farm.multiplier}</Multiplier>
@@ -151,13 +151,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
         </Flex>
         <Image src={`/images/farms/${farmImage}.svg`} alt={farm.tokenSymbol} width={80} height={80} />
       </CardImage>
-      <Label>
+      <Label color="rgba(116, 116, 116, 1)">
         <span>{TranslateString(316, 'Deposit')}</span>
         <span className="right">{farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')}</span>
       </Label>
-      <Label>
+      <Label color="rgba(116, 116, 116, 1)">
         <span>{TranslateString(318, 'Earn')}</span>
-        <span className="right">{farm.dual ? farm.dual.earnLabel : 'BEAN'}</span>
+        <span className="right">{farm.dual ? farm.dual.earnLabel : 'CAKE'}</span>
       </Label>
       {!removed && (
         <Label>
