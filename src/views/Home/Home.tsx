@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           Bean Finance
         </Heading>
         <Text color="rgba(116, 116, 116, 1)">The #1 Coffee Maker on Binance Smart Chain.</Text>
-        <Text> {`$${price.toNumber}`} </Text>
+        <Text> {price.toNumber} </Text>
       </Hero>
       <div>
         <Cards>
