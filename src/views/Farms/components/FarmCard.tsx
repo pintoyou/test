@@ -153,7 +153,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
       </CardImage>
       <Label>
         <span>{TranslateString(316, 'Deposit')}</span>
-        <span className="right">{farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('BEAN', '')}</span>
+        <span className="right">{farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')}</span>
       </Label>
       <Label>
         <span>{TranslateString(318, 'Earn')}</span>
