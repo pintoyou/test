@@ -56,6 +56,7 @@ const Cards = styled(BaseLayout)`
 const Home: React.FC = () => {
   const TranslateString = useI18n()
   const cakePriceUsd = usePriceCakeBusd()
+  const price = cakePriceUsd
 
 
 
@@ -66,7 +67,7 @@ const Home: React.FC = () => {
           Bean Finance
         </Heading>
         <Text color="rgba(116, 116, 116, 1)">The #1 Coffee Maker on Binance Smart Chain.</Text>
-        <UikitMenu  cakePriceUsd={cakePriceUsd.toNumber()}/>
+        <Text> {`$${price}`} </Text>
       </Hero>
       <div>
         <Cards>
