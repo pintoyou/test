@@ -149,7 +149,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
       {farm.tokenSymbol === 'BEAN' && <StyledCardAccent />}
       <CardImage>
         <Flex flexDirection="column" alignItems="flex-start">
-          <Multiplier>{farm.multiplier}</Multiplier>
+          <Multiplier color="rgba(116, 116, 116, 1)">{farm.multiplier}</Multiplier>
           {isCommunityFarm ? <CommunityTag /> : <CoreTag />}
         </Flex>
         <Image src={`/images/farms/${farmImage}.svg`} alt={farm.tokenSymbol} width={80} height={80} />
@@ -185,7 +185,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
       </Action>
       {!removed && (
         <Label>
-          <span>{TranslateString(23, 'Total Liquidity')}</span>
+          <span color="rgba(116, 116, 116, 1)">{TranslateString(23, 'Total Liquidity')}</span>
           <span className="right">{totalValueFormated}</span>
         </Label>
       )}
