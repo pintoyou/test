@@ -73,7 +73,7 @@ const Farm: React.FC = () => {
           <Heading as="h1" size="xxl" mb="16px" color="rgba(116, 116, 116, 1)">
             Coffee Pool
           </Heading>
-          <ul>
+          <ul color="rgba(116, 116, 116, 1)">
             <li color="rgba(116, 116, 116, 1)">Stake Bean to earn Bean&Coffee.</li>
             <li color="rgba(116, 116, 116, 1)">You can unstake at any time.</li>
             <li color="rgba(116, 116, 116, 1)">Rewards are calculated per block.</li>
