@@ -22,7 +22,7 @@ const Menu = (props) => {
       langs={allLanguages}
       setLang={setSelectedLanguage}
      
-      links={config}
+    
       {...props}
     />
   )
