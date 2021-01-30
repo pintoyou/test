@@ -18,10 +18,12 @@ export interface FarmWithStakedValue extends Farm {
 
 const Action = styled.div`
   padding: 16px 0;
+  color: rgba(116, 116, 116, 1);
 `
 
 const ViewMore = styled.div`
   padding-top: 16px;
+  color: rgba(116, 116, 116, 1);
 `
 
 const RainbowLight = keyframes`
@@ -105,6 +107,7 @@ const FCard = styled.div`
   padding: 24px;
   position: relative;
   text-align: center;
+  color: rgba(116, 116, 116, 1);
 `
 
 interface FarmCardProps {
@@ -131,7 +134,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
     if (farm.quoteTokenSymbol === QuoteToken.BNB) {
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
-    if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+    if (farm.quoteTokenSymbol === QuoteToken.BEAN) {
       return cakePrice.times(farm.lpTotalInQuoteToken)
     }
     return farm.lpTotalInQuoteToken
@@ -143,7 +146,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
 
   return (
     <FCard color="rgba(116, 116, 116, 1)">
-      {farm.tokenSymbol === 'CAKE' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'BEAN' && <StyledCardAccent />}
       <CardImage>
         <Flex flexDirection="column" alignItems="flex-start">
           <Multiplier>{farm.multiplier}</Multiplier>
