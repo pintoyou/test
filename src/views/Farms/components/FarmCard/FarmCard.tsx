@@ -123,7 +123,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses } = farm
 
   return (
-    <FCard>
+    <FCard color="rgba(116, 116, 116, 1)">
       {farm.tokenSymbol === 'BEAN' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
@@ -134,13 +134,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       />
       {!removed && (
         <Flex justifyContent="space-between">
-          <Text>{TranslateString(736, 'APR')}:</Text>
-          <Text bold>{farm.apy ? `${farmAPY}%` : 'Loading ...'}</Text>
+          <Text color="rgba(116, 116, 116, 1)">{TranslateString(736, 'APR')}:</Text>
+          <Text color="rgba(116, 116, 116, 1)" bold>{farm.apy ? `${farmAPY}%` : 'Loading ...'}</Text>
         </Flex>
       )}
       <Flex justifyContent="space-between">
-        <Text>{TranslateString(318, 'Earn')}:</Text>
-        <Text bold>{earnLabel}</Text>
+        <Text color="rgba(116, 116, 116, 1)">{TranslateString(318, 'Earn')}:</Text>
+        <Text color="rgba(116, 116, 116, 1)" bold>{earnLabel}</Text>
       </Flex>
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
       <Divider />
@@ -148,8 +148,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         onClick={() => setShowExpandableSection(!showExpandableSection)}
         expanded={showExpandableSection}
       />
-      <ExpandingWrapper expanded={showExpandableSection}>
-        <DetailsSection
+      <ExpandingWrapper color="rgba(116, 116, 116, 1)" expanded={showExpandableSection}>
+        <DetailsSection 
           removed={removed}
           bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
           totalValueFormated={totalValueFormated}

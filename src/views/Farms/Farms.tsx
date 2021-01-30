@@ -87,7 +87,7 @@ const Farms: React.FC = () => {
 
   return (
     <Page>
-      <Heading as="h1" size="lg" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
+      <Heading as="h1" size="lg" color="rgba(116, 116, 116, 1)" mb="50px" style={{ textAlign: 'center' }}>
         {TranslateString(999, 'Stake LP tokens to earn BEAN')}
       </Heading>
       
