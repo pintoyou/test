@@ -4,9 +4,10 @@ import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
 
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
+import { usePriceCakeBusd } from 'state/hooks'
 import FarmStakingCard from './components/FarmStakingCard'
 import CakeStats from './components/CakeStats'
-import { usePriceCakeBusd } from 'state/hooks'
+
 
 
 const Hero = styled.div`
