@@ -11,7 +11,7 @@ const pools: PoolConfig[] = [
       56: '0x402cC990fA250e78A20993a13972cD83Aa069D95',
     },
     poolCategory: PoolCategory.CORE,
-    projectLink: 'http://pancakeswap.finance/',
+    projectLink: 'http://blabla/',
     harvest: true,
     tokenPerBlock: '1',
     sortOrder: 1,
