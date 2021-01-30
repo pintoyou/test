@@ -20,7 +20,7 @@ const Name = styled(Heading).attrs({ as: 'h3', size: 'lg' })`
 `
 
 const Description = styled(Text)`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: rgba(116, 116, 116, 1);
   font-size: 14px;
   text-align: right;
 `

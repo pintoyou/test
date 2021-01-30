@@ -25,7 +25,7 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: rgba(116, 116, 116, 1);
   font-size: 14px;
 `
 

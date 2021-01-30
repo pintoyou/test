@@ -13,7 +13,7 @@ const Balance = styled.div`
 `
 
 const Label = styled.div`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: rgba(116, 116, 116, 1);
   font-size: 14px;
   margin-bottom: 16px;
 `

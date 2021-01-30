@@ -19,7 +19,7 @@ const Link = styled(UIKitLink)`
 `
 
 const Message = styled.p`
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: rgba(116, 116, 116, 1);
   font-size: 14px;
   padding-top: 16px;
   text-align: center;
