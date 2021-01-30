@@ -68,7 +68,7 @@ const Multiplier = styled.div`
   padding: 0 8px;
   background: #25beca;
   border-radius: 8px;
-  color: ${(props) => props.theme.colors.background};
+  color: rgba(116, 116, 116, 1);
   font-weight: 900;
   margin-bottom: 8px;
   display: inline-block;
@@ -83,13 +83,13 @@ const CardImage = styled.div`
 
 const Label = styled.div`
   line-height: 1.5rem;
-  color: ${(props) => props.theme.colors.secondary};
+  color: rgba(116, 116, 116, 1);
   > span {
     float: left;
   }
   .right {
     float: right;
-    color: ${(props) => props.theme.colors.primary};
+    color: rgba(116, 116, 116, 1);
     font-weight: 900;
   }
 `
@@ -143,7 +143,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'CAKE' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'BEAN' && <StyledCardAccent />}
       <CardImage>
         <Flex flexDirection="column" alignItems="flex-start">
           <Multiplier>{farm.multiplier}</Multiplier>
@@ -153,11 +153,11 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed }) => {
       </CardImage>
       <Label>
         <span>{TranslateString(316, 'Deposit')}</span>
-        <span className="right">{farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')}</span>
+        <span className="right">{farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('BEAN', '')}</span>
       </Label>
       <Label>
         <span>{TranslateString(318, 'Earn')}</span>
-        <span className="right">{farm.dual ? farm.dual.earnLabel : 'CAKE'}</span>
+        <span className="right">{farm.dual ? farm.dual.earnLabel : 'BEAN'}</span>
       </Label>
       {!removed && (
         <Label>
