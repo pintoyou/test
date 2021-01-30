@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
+import { Menu as UikitMenu } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from './components/FarmStakingCard'
 import CakeStats from './components/CakeStats'
+import { usePriceCakeBusd } from 'state/hooks'
 
 
 const Hero = styled.div`
@@ -53,6 +55,9 @@ const Cards = styled(BaseLayout)`
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
+  const cakePriceUsd = usePriceCakeBusd()
+
+
 
   return (
     <Page>
@@ -61,6 +66,7 @@ const Home: React.FC = () => {
           Bean Finance
         </Heading>
         <Text color="rgba(116, 116, 116, 1)">The #1 Coffee Maker on Binance Smart Chain.</Text>
+        <UikitMenu  cakePriceUsd={cakePriceUsd.toNumber()}/>
       </Hero>
       <div>
         <Cards>
