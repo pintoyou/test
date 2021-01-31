@@ -69,7 +69,7 @@ const Farm: React.FC = () => {
     <Page>
       <Hero>
       <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
-        <div>
+        <div color="rgba(116, 116, 116, 1)">
           <Heading as="h1" size="xxl" mb="16px" color="rgba(116, 116, 116, 1)">
             Coffee Pool
           </Heading>
