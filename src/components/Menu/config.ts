@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance',
+        href: 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xA0CcF44bA5d67E0095247F78C697Ad7cBD6E63e9',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
+        href: 'https://exchange.pancakeswap.finance/#/add/0xA0CcF44bA5d67E0095247F78C697Ad7cBD6E63e9/ETH',
       },
     ],
   },
