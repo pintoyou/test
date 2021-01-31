@@ -115,7 +115,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <CardTitle isFinished={isFinished && sousId !== 0} color="rgba(116, 116, 116, 1)">
           {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
         </CardTitle>
-        <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
+        <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }} color="rgba(116, 116, 116, 1)">
           <div style={{ flex: 1 }}>
             <Image src={`/images/tokens/${image || tokenName}.png`} width={64} height={64} alt={tokenName} />
           </div>
@@ -133,10 +133,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           )}
         </div>
         {!isOldSyrup ? (
-          <BalanceAndCompound>
+          <BalanceAndCompound color="rgba(116, 116, 116, 1)">
             <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
             {sousId === 0 && account && harvest && (
-              <HarvestButton
+              <HarvestButton 
               
                 disabled={!earnings.toNumber() || pendingTx}
                 text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(999, 'Compound')}
@@ -148,7 +148,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <OldSyrupTitle hasBalance={accountHasStakedBalance} />
         )}
         <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
-        <StyledCardActions>
+        <StyledCardActions color="rgba(116, 116, 116, 1)">
           {!account && <UnlockButton />}
           {account &&
             (needsApproval && !isOldSyrup ? (
