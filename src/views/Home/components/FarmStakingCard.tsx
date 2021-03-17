@@ -10,10 +10,11 @@ import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/cake-bg.svg');
+  background-image: url('/images/controller-bg.svg');
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 376px;
+  background-size: 150px auto;
 `
 
 const Block = styled.div`
@@ -25,7 +26,7 @@ const CardImage = styled.img`
 `
 
 const Label = styled.div`
-  color: rgba(116, 116, 116, 1);
+  color: ${({ theme }) => theme.colors.textSubtle};
   font-size: 14px;
 `
 
@@ -55,18 +56,18 @@ const FarmedStakingCard = () => {
 
   return (
     <StyledFarmStakingCard>
-      <CardBody color="rgba(116, 116, 116, 1)">
-        <Heading size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
-          Farms & Staking
+      <CardBody>
+        <Heading size="xl" mb="24px">
+          {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
-        <Block color="rgba(116, 116, 116, 1)">
+        <CardImage src="/images/controller.png" alt="gme logo" width={64} />
+        <Block>
+          <Label>{TranslateString(544, 'GME to Harvest')}:</Label>
           <CakeHarvestBalance />
-          <Label color="rgba(116, 116, 116, 1)">BEAN to Harvest</Label>
         </Block>
-        <Block color="rgba(116, 116, 116, 1)">
+        <Block>
+          <Label>{TranslateString(546, 'GME in Wallet')}:</Label>
           <CakeWalletBalance />
-          <Label color="rgba(116, 116, 116, 1)">BEAN in Wallet</Label>
         </Block>
         <Actions>
           {account ? (
@@ -77,8 +78,8 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting BEAN')
-                : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
+                ? TranslateString(548, 'Collecting GME')
+                : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (
             <UnlockButton fullWidth />
