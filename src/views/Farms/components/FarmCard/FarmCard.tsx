@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
-import { Flex, Text } from '@pancakeswap-libs/uikit'
+import { Flex, Text } from '@gametoken/uikit'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
@@ -135,12 +135,16 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       {!removed && (
         <Flex justifyContent="space-between">
           <Text color="rgba(116, 116, 116, 1)">{TranslateString(736, 'APR')}:</Text>
-          <Text color="rgba(116, 116, 116, 1)" bold>{farm.apy ? `${farmAPY}%` : 'Loading ...'}</Text>
+          <Text color="rgba(116, 116, 116, 1)" bold>
+            {farm.apy ? `${farmAPY}%` : 'Loading ...'}
+          </Text>
         </Flex>
       )}
       <Flex justifyContent="space-between">
         <Text color="rgba(116, 116, 116, 1)">{TranslateString(318, 'Earn')}:</Text>
-        <Text color="rgba(116, 116, 116, 1)" bold>{earnLabel}</Text>
+        <Text color="rgba(116, 116, 116, 1)" bold>
+          {earnLabel}
+        </Text>
       </Flex>
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
       <Divider />
@@ -149,7 +153,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         expanded={showExpandableSection}
       />
       <ExpandingWrapper color="rgba(116, 116, 116, 1)" expanded={showExpandableSection}>
-        <DetailsSection 
+        <DetailsSection
           removed={removed}
           bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
           totalValueFormated={totalValueFormated}

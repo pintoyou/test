@@ -1,4 +1,4 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from '@gametoken/uikit'
 
 const config: MenuEntry[] = [
   {
@@ -12,16 +12,16 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0xA0CcF44bA5d67E0095247F78C697Ad7cBD6E63e9',
+        href: 'https://exchange.pancakeswap.finance',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/add/0xA0CcF44bA5d67E0095247F78C697Ad7cBD6E63e9/ETH',
+        href: 'https://exchange.pancakeswap.finance/#/pool',
       },
     ],
   },
   {
-    label: 'Farms',
+    label: 'Farming',
     icon: 'FarmIcon',
     href: '/farms',
   },
@@ -30,11 +30,51 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/pools',
   },
- 
-  
-  
-    
-
+  {
+    label: 'Market',
+    icon: 'IfoIcon',
+    items: [{ label: 'Purchase Key', href: '/purchase' }],
+  },
+  {
+    label: 'Info',
+    icon: 'InfoIcon',
+    items: [
+      {
+        label: 'Overview',
+        href: 'https://pancakeswap.info',
+      },
+      {
+        label: 'Tokens',
+        href: 'https://pancakeswap.info/tokens',
+      },
+      {
+        label: 'Pairs',
+        href: 'https://pancakeswap.info/pairs',
+      },
+      {
+        label: 'Accounts',
+        href: 'https://pancakeswap.info/accounts',
+      },
+    ],
+  },
+  {
+    label: 'More',
+    icon: 'MoreIcon',
+    items: [
+      {
+        label: 'Github',
+        href: 'https://github.com/GameTokenFinance',
+      },
+      {
+        label: 'Docs',
+        href: 'https://docs.gametoken.finance/',
+      },
+      {
+        label: 'Blog',
+        href: 'https://medium.com/@GameToken',
+      },
+    ],
+  },
 ]
 
 export default config

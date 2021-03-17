@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, Button } from '@pancakeswap-libs/uikit'
+import { Image, Button } from '@gametoken/uikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
 import Card from './Card'
@@ -44,7 +44,7 @@ const Coming: React.FC = () => {
           </span>
         </CardTitle>
         <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
-       
+
         <Label color="rgba(116, 116, 116, 1)">Create a pool for your token</Label>
         <Button
           variant="secondary"
@@ -53,11 +53,10 @@ const Coming: React.FC = () => {
           external
           fullWidth
           mb="16px"
-         color="rgba(116, 116, 116, 1)"
+          color="rgba(116, 116, 116, 1)"
         >
           Apply Now
         </Button>
-       
       </div>
       <Footer>
         <CommunityTag />

@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
-
+import { Heading, Text, BaseLayout } from '@gametoken/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
-import { usePriceCakeBusd } from 'state/hooks'
-import FarmStakingCard from './components/FarmStakingCard'
-import CakeStats from './components/CakeStats'
-
-
+import FarmStakingCard from 'views/Home/components/FarmStakingCard'
+import CakeStats from 'views/Home/components/CakeStats'
+import TotalValueLockedCard from 'views/Home/components/TotalValueLockedCard'
+import EarnAPYCard from 'views/Home/components/EarnAPYCard'
+import EarnAssetCard from 'views/Home/components/EarnAssetCard'
+import TweetCard from './components/TweetCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/pan-bg-mobile.svg');
+  background-image: url('/images/logo-mobile.svg');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -22,9 +22,8 @@ const Hero = styled.div`
   margin-bottom: 32px;
   padding-top: 116px;
   text-align: center;
-
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/pan-bg2.svg'), url('/images/pan-bg.svg');
+    background-image: url('/images/logo.svg'), url('/images/game-world.svg');
     background-position: left center, right center;
     height: 165px;
     padding-top: 0;
@@ -34,19 +33,34 @@ const Hero = styled.div`
 const Cards = styled(BaseLayout)`
   align-items: stretch;
   justify-content: stretch;
-  margin-bottom: 48px;
-
+  margin-bottom: 32px;
   & > div {
     grid-column: span 6;
     width: 100%;
   }
-
   ${({ theme }) => theme.mediaQueries.sm} {
     & > div {
       grid-column: span 8;
     }
   }
+  ${({ theme }) => theme.mediaQueries.lg} {
+    & > div {
+      grid-column: span 6;
+    }
+  }
+`
 
+const CTACards = styled(BaseLayout)`
+  align-items: start;
+  margin-bottom: 32px;
+  & > div {
+    grid-column: span 6;
+  }
+  ${({ theme }) => theme.mediaQueries.sm} {
+    & > div {
+      grid-column: span 8;
+    }
+  }
   ${({ theme }) => theme.mediaQueries.lg} {
     & > div {
       grid-column: span 6;
@@ -56,25 +70,27 @@ const Cards = styled(BaseLayout)`
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
-  const cakePriceUsd = usePriceCakeBusd()
-  const price = cakePriceUsd
-
-
 
   return (
     <Page>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
-          Bean Finance
+        <Heading as="h1" size="xl" mb="24px" color="secondary">
+          {TranslateString(576, 'Gametoken')}
         </Heading>
-        <Text color="rgba(116, 116, 116, 1)">The #1 Coffee Maker on Binance Smart Chain.</Text>
-        <Text> {price.toNumber} </Text>
+        <Text>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>
           <FarmStakingCard />
+          <TweetCard />
+        </Cards>
+        <CTACards>
+          <EarnAPYCard />
+          <EarnAssetCard />
+        </CTACards>
+        <Cards>
           <CakeStats />
-         
+          <TotalValueLockedCard />
         </Cards>
       </div>
     </Page>

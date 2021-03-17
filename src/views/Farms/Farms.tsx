@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
-import { Image, Heading } from '@pancakeswap-libs/uikit'
+import { Image, Heading } from '@gametoken/uikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -90,7 +90,7 @@ const Farms: React.FC = () => {
       <Heading as="h1" size="lg" color="rgba(116, 116, 116, 1)" mb="50px" style={{ textAlign: 'center' }}>
         {TranslateString(999, 'Stake LP tokens to earn BEAN')}
       </Heading>
-      
+
       <div>
         <Divider />
         <FlexLayout>

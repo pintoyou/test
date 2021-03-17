@@ -1,7 +1,7 @@
 {
-  "short_name": "BeanFinance",
-  "name": "BeanFinance",
-  "description": "Farm Bean with Coffee Tokens",
+  "short_name": "PancakeSwap",
+  "name": "PancakeSwap",
+  "description": "Farm CAKE with Pancake LP Tokens",
   "icons": [
     {
       "src": "favicon.ico",
@@ -11,6 +11,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#747474",
+  "theme_color": "#000000",
   "background_color": "#ffffff"
 }

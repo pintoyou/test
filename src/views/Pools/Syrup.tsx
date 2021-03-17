@@ -3,7 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading } from '@pancakeswap-libs/uikit'
+import { Heading } from '@gametoken/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -68,7 +68,7 @@ const Farm: React.FC = () => {
   return (
     <Page>
       <Hero>
-      <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
+        <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
         <div color="rgba(116, 116, 116, 1)">
           <Heading as="h1" size="xxl" mb="16px" color="rgba(116, 116, 116, 1)">
             Coffee Pool
@@ -79,9 +79,8 @@ const Farm: React.FC = () => {
             <li color="rgba(116, 116, 116, 1)">Rewards are calculated per block.</li>
           </ul>
         </div>
-       
       </Hero>
-     
+
       <Divider />
       <FlexLayout>
         <Route exact path={`${path}`}>

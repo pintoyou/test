@@ -1,12 +1,11 @@
 import React from 'react'
-import { Card, CardBody, Skeleton, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Skeleton, Heading, Text } from '@gametoken/uikit'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { useGetStats } from 'hooks/api'
 import CardValue from './CardValue'
-
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
@@ -22,7 +21,6 @@ const Row = styled.div`
 `
 
 const CakeStats = () => {
- 
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
@@ -30,33 +28,38 @@ const CakeStats = () => {
   const tvl = data ? data.total_value_locked_all.toLocaleString('en-US', { maximumFractionDigits: 0 }) : null
 
   return (
-    <StyledCakeStats >
+    <StyledCakeStats>
       <CardBody color="rgba(116, 116, 116, 1)">
         <Heading size="xl" mb="24px" color="rgba(116, 116, 116, 1)">
           Bean Stats
         </Heading>
         <Row color="rgba(116, 116, 116, 1)">
-          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">Total Bean Supply</Text>
+          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">
+            Total Bean Supply
+          </Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} />}
         </Row>
         <Row color="rgba(116, 116, 116, 1)">
-          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">Total Bean Burned</Text>
+          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">
+            Total Bean Burned
+          </Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} />
         </Row>
         <Row color="rgba(116, 116, 116, 1)">
-          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">New Bean/block</Text>
+          <Text fontSize="14px" color="rgba(116, 116, 116, 1)">
+            New Bean/block
+          </Text>
           <CardValue fontSize="14px" decimals={0} value={25} />
         </Row>
-        
       </CardBody>
       <CardBody>
-      <Heading size="lg" mb="24px" color="rgba(116, 116, 116, 1)">
+        <Heading size="lg" mb="24px" color="rgba(116, 116, 116, 1)">
           Total Value Locked (TVL)
         </Heading>
         {data ? (
           <>
             <Heading color="rgba(116, 116, 116, 1)" size="xl">{`$${tvl}`}</Heading>
-            <Text color="rgba(116, 116, 116, 1)" >All Coffee LPs and Pools</Text>
+            <Text color="rgba(116, 116, 116, 1)">All Coffee LPs and Pools</Text>
           </>
         ) : (
           <>
